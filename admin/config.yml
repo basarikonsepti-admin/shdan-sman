@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+display_url: https://shdanismanlik.netlify.app
+logo_url: https://shdanismanlik.netlify.app/logo.webp
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  # 1. HİZMETLER (CPanel'deki Hizmet Yönetimi Gibi)
+  - name: "services"
+    label: "💼 Hizmet Yönetimi"
+    folder: "content/services"
+    create: true # Yeni hizmet ekleyebilir/silebilir
+    slug: "{{slug}}"
+    fields:
+      - {label: "Hangi Layout?", name: "layout", widget: "hidden", default: "layouts/base.html"}
+      - {label: "Hizmet Adı", name: "title", widget: "string"}
+      - {label: "Özet Metin (Banner Altı)", name: "excerpt", widget: "text"}
+      - {label: "İkon/Görsel", name: "image", widget: "image"}
+      - {label: "Detaylı İçerik", name: "body", widget: "markdown"} # Burası WYSIWYG editördür (Word gibi)
+      - label: "Yan Menü Özellikleri"
+        name: "sidebar"
+        widget: "object"
+        fields:
+          - {label: "Başlık", name: "title", widget: "string", default: "Neden Biz?"}
+          - {label: "Avantajlar", name: "items", widget: "list"}
+
+  # 2. BLOG & MAKALELER (Kategorili Yapı)
+  - name: "blog"
+    label: "📰 Makale & Blog"
+    folder: "content/blog"
+    create: true
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Kategori", name: "category", widget: "select", options: ["Mevzuat", "STK Rehberi", "Duyurular", "Başarı Hikayeleri"]}
+      - {label: "Kapak Fotoğrafı", name: "image", widget: "image"}
+      - {label: "Yazı İçeriği", name: "body", widget: "markdown"}
+
+  # 3. KURUMSAL SAYFALAR
+  - name: "pages"
+    label: "📄 Kurumsal Sayfalar"
+    files:
+      - file: "content/pages/hakkimizda.html"
+        label: "Hakkımızda Sayfası"
+        name: "about"
+        fields:
+          - {label: "Ana Başlık", name: "title", widget: "string"}
+          - {label: "İçerik", name: "body", widget: "markdown"}
+
+  # 4. SİTE AYARLARI (White-label iletişim bilgileri)
+  - name: "settings"
+    label: "⚙️ Site Genel Ayarları"
+    editor:
+      preview: false
+    files:
+      - file: "content/settings.yml"
+        label: "İletişim & Sosyal Medya"
+        name: "general"
+        fields:
+          - {label: "Resmi Telefon", name: "phone", widget: "string"}
+          - {label: "WhatsApp Numarası", name: "whatsapp", widget: "string"}
+          - {label: "E-Posta", name: "email", widget: "string"}
