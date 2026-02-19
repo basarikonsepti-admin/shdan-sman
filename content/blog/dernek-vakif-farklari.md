@@ -1,16 +1,20 @@
 ---
+excerpt: Sivil toplum yapınızı belirlerken dernek ve vakıf arasındaki yasal,
+  mali ve idari farkları bilin.
+draft: false
 layout: layouts/blog-post.html
-title: "Dernek ve Vakıf Arasındaki 5 Temel Fark Nedir?"
-description: "Dernek mi yoksa vakıf mı kurmalısınız? Türkiye'deki STK mevzuatına göre dernek ve vakıf arasındaki yasal, mali ve idari 5 temel farkı detaylarıyla inceleyin."
-date: 2024-10-15
-category: "Rehber"
-image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800"
-excerpt: "Sivil toplum yapınızı belirlerken dernek ve vakıf arasındaki yasal, mali ve idari farkları bilin."
+title: Dernek ve Vakıf Arasındaki 5 Temel Fark Nedir?
+image: https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800
+category: Rehber
+date: 2026-01-20
+description: Dernek mi yoksa vakıf mı kurmalısınız? Türkiye'deki STK mevzuatına
+  göre dernek ve vakıf arasındaki yasal, mali ve idari 5 temel farkı
+  detaylarıyla inceleyin.
+featured: true
 ---
-
 Bir sosyal sorumluluk projesine başlarken en sık karşılaşılan sorulardan biri, yapının dernek mi yoksa vakıf mı olması gerektiğidir. Her iki yapı da topluma hizmet amacı gütse de, Türk Medeni Kanunu ve ilgili mevzuatlara göre aralarında kritik farklar bulunur. İşte karar verme sürecinizi kolaylaştıracak 5 temel fark:
 
-### 1. Temel Yapı: Kişi Topluluğu vs. Mal Topluluğu
+### 1. Temel Yapı: Kişi Topluluğu vs. MAL TOPLULUĞU
 
 Dernekler, belirli bir amacı gerçekleştirmek üzere bir araya gelen en az yedi gerçek veya tüzel kişinin oluşturduğu topluluklardır. Vakıflar ise, belirli bir amaca hizmet etmek üzere tahsis edilmiş mallardan (para, gayrimenkul vb.) oluşur. Yani dernekte "üye", vakıfta "mal varlığı" esastır.
 
@@ -32,4 +36,4 @@ Dernek kurmak için kanunen belirlenmiş bir başlangıç sermayesi gerekmez. An
 
 Dernekler, İçişleri Bakanlığı Sivil Toplumla İlişkiler Genel Müdürlüğü tarafından denetlenir. Vakıflar ise doğrudan Kültür ve Turizm Bakanlığı'na bağlı Vakıflar Genel Müdürlüğü'nün (VGM) denetim ve gözetimine tabidir.
 
-> Özetle; insan gücüne dayalı, geniş kitlelerin katılımını hedefleyen bir yapı için **Dernek**; eldeki bir kaynağı sonsuza dek bir amaca hizmet ettirmek için ise **Vakıf** yapısı daha uygundur.
+> Özetle; insan gücüne dayalı, geniş kitlelerin katılımını hedefleyen bir yapı için **Dernek**; eldeki bir kaynağı sonsuza dek bir amaca hizmet ettirmek için ise **VAKIF** yapısı daha uygundur.
