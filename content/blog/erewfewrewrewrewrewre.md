@@ -1,10 +1,11 @@
 ---
 title: erewfewrewrewrewrewre
-image_alt: wrewrewgfhy gfhfhgfh g
+image: /img/quantum-system.jpg
+image_alt: oeoroeoreworoe wgfhy gfhfhgfh g
 category: Blog-Makaleler
 date: 2026-02-20
 author: "Abdullah "
-excerpt: g hfh fdggfh  rergfdge tret ertre tret e
+excerpt: g hfh fdggfh  rergfdge tret ertre tret e gfgfdgeregregreg
 tags:
   - fgdfgffggfd
 description: "fgfdg dfgfdgfdg fdgdfgfdgfdg "
