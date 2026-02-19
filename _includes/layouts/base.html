@@ -115,21 +115,24 @@
                     {{ content | safe }}
                 </div>
 
-                <!-- SIDEBAR -->
-                <aside class="sidebar">
-                    <!-- HİZMETLERİMİZ -->
-                    <div class="widget">
-                        <h4>Hizmetlerimiz</h4>
-                        <ul>
-                            <li><a href="/hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
-                            <li><a href="/hizmet-derbis.html">DERBİS İşlemleri</a></li>
-                            <li><a href="/hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
-                            <li><a href="/hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
-                            <li><a href="/hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
-                            <li><a href="/hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
-                            <li><a href="/hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
-                        </ul>
-                    </div>
+               <!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <!-- HİZMETLERİMİZ -->
+    <div class="widget">
+        <h4>Hizmetlerimiz</h4>
+        <ul>
+            <li><a href="/hizmet-dernek-kurulusu.html" {% if page.url == "/hizmet-dernek-kurulusu.html" %}class="active"{% endif %}>Dernek Kuruluşu</a></li>
+            <li><a href="/hizmet-derbis.html" {% if page.url == "/hizmet-derbis.html" %}class="active"{% endif %}>DERBİS İşlemleri</a></li>
+            <li><a href="/hizmet-vakif-kurulusu.html" {% if page.url == "/hizmet-vakif-kurulusu.html" %}class="active"{% endif %}>Vakıf Kuruluşu</a></li>
+            <li><a href="/hizmet-genel-kurul.html" {% if page.url == "/hizmet-genel-kurul.html" %}class="active"{% endif %}>Genel Kurul Yönetimi</a></li>
+            <li><a href="/hizmet-mali-danismanlik.html" {% if page.url == "/hizmet-mali-danismanlik.html" %}class="active"{% endif %}>Mali Danışmanlık</a></li>
+            <li><a href="/hizmet-proje-yazma.html" {% if page.url == "/hizmet-proje-yazma.html" %}class="active"{% endif %}>Proje ve Fon Geliştirme</a></li>
+            <li><a href="/hizmet-yasal-danismanlik.html" {% if page.url == "/hizmet-yasal-danismanlik.html" %}class="active"{% endif %}>Yasal Danışmanlık</a></li>
+        </ul>
+    </div>
+
+</aside>
 
                     <!-- NEDEN BİZ -->
                     {% if sidebar_title %}
