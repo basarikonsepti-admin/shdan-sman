@@ -1,47 +1,13 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO VE KURUMSAL OTORİTE AYARLARI -->
-    <title>Referanslarımız & Başarı Hikayeleri | SH Danışmanlık</title>
-    <meta name="description" content="SH Danışmanlık'ın güvenle hizmet verdiği dernekler, vakıflar ve STK'lar. Çesiad, Udofed, Mosef ve onlarca başarılı kurumun referanslarını inceleyin.">
-    <meta name="keywords" content="stk referansları, dernek danışmanlık referans, vakıf kurulum başarı hikayeleri, Udofed, Çesiad, Mosef, STK çözüm ortakları">
-    <link rel="canonical" href="https://shdanismanlik.netlify.app/referanslar.html">
+---
+layout: layouts/fullwidth.html
+title: "Referanslarımız"
+description: "SH Danışmanlık'ın güvenle hizmet verdiği dernekler, vakıflar ve STK'lar. Çesiad, Udofed, Mosef ve onlarca başarılı kurumun referanslarını inceleyin."
+excerpt: "150'den fazla sivil toplum kuruluşuyla yürüttüğümüz başarı dolu yolculuğumuz."
+banner_image: "/img/banner1.webp"
+permalink: "/referanslar.html"
+---
 
-    <!-- GOOGLE İNCELEME ŞEMASI (JSON-LD) - Arama sonuçlarında yıldız ve güven puanı sağlar -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "SH Danışmanlık",
-      "url": "https://shdanismanlik.netlify.app/referanslar.html",
-      "logo": "https://shdanismanlik.netlify.app/logo.webp",
-      "sameAs": [
-        "https://linkedin.com/company/shdanismanlik",
-        "https://instagram.com/shdanismanlik"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+90-534-705-42-34",
-        "contactType": "customer service"
-      }
-    }
-    </script>
-
-    <!-- PERFORMANS: LCP (Banner Görseli Ön Yükleme) -->
-    <link rel="preload" as="image" href="img/banner1.webp" fetchpriority="high">
-
-    <!-- PERFORMANS: Font ve İkonların Engelleyici Olmadan Yüklenmesi -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="logo.webp" type="image/webp">
-
-    <style>
+<style>
         /* KURUMSAL WHATSAPP WIDGET (Sıfır JavaScript - Maksimum Hız - Ako Dijital Standardı) */
         .wa-floating-btn { position: fixed; bottom: 25px; left: 25px; z-index: 9999; display: flex; align-items: center; text-decoration: none; transition: all 0.3s ease; }
         .wa-icon { background-color: #25d366; color: white !important; width: 60px; height: 60px; border-radius: 50px; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
@@ -56,65 +22,8 @@
         .logo-item img { max-width: 100%; max-height: 80px; object-fit: contain; filter: grayscale(100%); transition: filter 0.3s ease; }
         .logo-item:hover img { filter: grayscale(0%); }
     </style>
-</head>
-<body>
 
-<header class="main-header">
-  <div class="container header-container">
-    <a href="index.html" class="logo-container">
-      <img src="logo.webp" alt="SH Danışmanlık" class="logo-img" width="180" height="55" />
-    </a>
-    <nav class="main-nav">
-      <button class="nav-close-btn" aria-label="Menüyü kapat"><i class="fas fa-times"></i></button>
-      <ul>
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li class="dropdown">
-          <a href="#">Kurumsal <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="hizmetlerimiz.html">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="hizmet-dernek-kurulusu.html">Dernek Kuruluşu</a></li>
-            <li><a href="hizmet-derbis.html">DERBİS İşlemleri</a></li>
-
-            <li><a href="hizmet-vakif-kurulusu.html">Vakıf Kuruluşu</a></li>
-            <li><a href="hizmet-genel-kurul.html">Genel Kurul Yönetimi</a></li>
-            <li><a href="hizmet-mali-danismanlik.html">Mali Danışmanlık</a></li>
-            <li><a href="hizmet-proje-yazma.html">Proje ve Fon Geliştirme</a></li>
-            <li><a href="hizmet-yasal-danismanlik.html">Yasal Danışmanlık</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#">Bilgi Bankası <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-             <li><a href="mevzuat.html">Mevzuatlar</a></li>
-            <li><a href="blog-dernek-yonetici-sorumluluklari.html">Yönetici Sorumlulukları</a></li> 
-            <li><a href="blog-stk-iktisadi-isletme-avantajlari.html">İktisadi İşletme Avantajları</a></li>
-            <li><a href="blog.html">Blog & Makaleler</a></li>
-          </ul>
-        </li>
-        <li><a href="referanslar.html" class="active">Referanslar</a></li>
-        <li><a href="iletisim.html">İletişim</a></li>
-      </ul>
-    </nav>
-    <button class="nav-open-btn" aria-label="Menüyü aç"><i class="fas fa-bars"></i></button>
-  </div>
-</header>
-
-<main>
-    <!-- PAGE HEADER -->
-    <section class="page-header" style="background-image: url('img/banner1.webp');">
-        <div class="container">
-            <h1>Referanslarımız</h1>
-            <p>150'den fazla sivil toplum kuruluşuyla yürüttüğümüz başarı dolu yolculuğumuz.</p>
-        </div>
-    </section>
-
-   <section class="page-content">
+<section class="page-content">
             <div class="container">
                 
                 <!-- =============================================== -->
@@ -162,81 +71,3 @@
             </div>
         </div>
     </section>
-</main>
-<!-- MÜŞTERİ YORUMLARI -->
-                <div class="testimonials-section-inner">
-                    <h2 class="section-title">Yol Arkadaşlarımız Ne Dedi?</h2>
-                    <div class="testimonials-grid">
-                        <div class="testimonial-card">
-                            <p>"Genel kurulumuzu ilk defa yapacaktık ve çok endişeliydik. SH Danışmanlık tüm süreci yönetti ve bize sadece kararları almak kaldı. Harika bir hizmet."</p>
-                            <div class="testimonial-author">
-                                <img src="https://i.pravatar.cc/100?img=5" alt="Müşteri 1">
-                                <div>
-                                    <h4>Ayşe Kaya</h4>
-                                    <span>Kariyer Gelişim Vakfı Yön. Kur. Üyesi</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                             <p>"Karmaşık tüzük değişikliği işlemimizi 3 gün gibi kısa bir sürede sorunsuzca hallettiler. Mevzuata bu kadar hakim bir ekiple çalışmak büyük bir güvence."</p>
-                            <div class="testimonial-author">
-                                <img src="https://i.pravatar.cc/100?img=8" alt="Müşteri 2">
-                                <div>
-                                    <h4>Mehmet Öztürk</h4>
-                                    <span>Teknoloji ve Bilim Derneği</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-<footer class="main-footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <p>"Bize Uğrayın, Bürokrasiye Takılmayın"</p>
-                <p>© 2026 SH Danışmanlık. Tüm Hakları Saklıdır.</p>
-            </div>
-            <div class="footer-col">
-                <p><strong>Hızlı Menü</strong></p>
-                <ul>
-                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="referanslar.html">Referanslar</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="iletisim.html">İletişim</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <p><strong>İletişim</strong></p>
-                <p><i class="fas fa-map-marker-alt"></i> Ümraniye, İstanbul</p>
-                <p><i class="fas fa-phone"></i> +90 534 705 42 34</p>
-                <p><i class="fas fa-envelope"></i> info@shdanismanlik.com</p>
-            </div>
-            <div class="footer-col">
-                <p><strong>Takip Edin</strong></p>
-                <div class="social-icons">
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom" style="margin-top: 20px; text-align: center; font-size: 14px; color: #999;">
-            <p>© 2026 Tasarım ve Yazılım. Design by <a href="https://akodijital.com" target="_blank" rel="noopener" style="color: #00a8e8; font-weight: 600; text-decoration: none;">AKODİJİTAL</a></p>
-        </div>
-    </div>
-</footer>
-<!-- KURUMSAL WHATSAPP WIDGET (Sıfır JavaScript - Hız ve SEO Canavarı - Ako Dijital Standardı) -->
-<a href="https://wa.me/905347054234" class="wa-floating-btn" target="_blank" rel="noopener" aria-label="WhatsApp üzerinden referanslarımız hakkında bilgi alın">
-    <div class="wa-icon"><i class="fab fa-whatsapp"></i></div>
-    <div class="wa-label">Size Nasıl Yardımcı Olabiliriz?</div>
-</a>
-
-<!-- ✅ JAVASCRIPT DOSYASI DEFER İLE YÜKLEME (En sonda) -->
-<script src="js/script.js" defer></script>
-</body>
-</html>
