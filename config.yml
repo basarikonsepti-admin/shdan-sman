@@ -1,0 +1,460 @@
+backend:
+  name: git-gateway
+  branch: main
+
+display_url: https://shdanismanlik.netlify.app
+logo_url: https://shdanismanlik.netlify.app/logo.webp
+locale: "tr"
+
+media_folder: "img"
+public_folder: "/img"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+# ═══════════════════════════════════════════════
+#  SH DANIŞMANLIK - YÖNETİM PANELİ KONFIGURASYON
+# ═══════════════════════════════════════════════
+
+collections:
+
+  # ─────────────────────────────────────────────
+  #  1. BLOG & MAKALELER
+  # ─────────────────────────────────────────────
+  - name: "blog"
+    label: "📝 Blog & Makaleler"
+    label_singular: "Blog Yazisi"
+    folder: "content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    sort: "date:desc"
+    summary: "{{title}} — {{category}} — {{date}}"
+    view_groups:
+      - label: "Kategoriye Göre"
+        field: category
+      - label: "Yıla Göre"
+        field: date
+        pattern: "\\d{4}"
+    view_filters:
+      - label: "Mevzuat"
+        field: category
+        pattern: "Mevzuat"
+      - label: "Uzman Rehberi"
+        field: category
+        pattern: "Uzman Rehberi"
+      - label: "Hibe Fırsatı"
+        field: category
+        pattern: "Hibe Firsati"
+      - label: "Duyurular"
+        field: category
+        pattern: "Duyurular"
+      - label: "Basarı Hikayeleri"
+        field: category
+        pattern: "Basari Hikayeleri"
+      - label: "Rehber"
+        field: category
+        pattern: "Rehber"
+      - label: "Finansal Strateji"
+        field: category
+        pattern: "Finansal Strateji"
+    fields:
+      - label: "Yazı Başlığı"
+        name: "title"
+        widget: "string"
+        hint: "Blog yazısının ana başlığı (SEO için 50-60 karakter önerilir)"
+
+      - label: "Kapak Görseli (Opsiyonel)"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "1200x630px önerilir — Blog listesinde ve sosyal medyada görünür"
+
+      - label: "Kapak Görseli Alt Metni (SEO)"
+        name: "image_alt"
+        widget: "string"
+        required: false
+        hint: "Görsel açıklaması — Google görsel araması için önemli"
+
+      - label: "Kategori"
+        name: "category"
+        widget: "select"
+        hint: "Yazının hangi kategoride görüneceğini seçin"
+        options:
+          - { label: "Mevzuat", value: "Mevzuat" }
+          - { label: "Uzman Rehberi", value: "Uzman Rehberi" }
+          - { label: "Hibe Fırsatı", value: "Hibe Firsati" }
+          - { label: "Duyurular", value: "Duyurular" }
+          - { label: "Basarı Hikayeleri", value: "Basari Hikayeleri" }
+          - { label: "Rehber", value: "Rehber" }
+          - { label: "Finansal Strateji", value: "Finansal Strateji" }
+
+      - label: "Yayın Tarihi"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        hint: "Yazının yayınlanma tarihi"
+
+      - label: "Kısa Özet"
+        name: "excerpt"
+        widget: "text"
+        required: false
+        hint: "Blog listesinde ve sosyal medyada görünen kısa açıklama (max 160 karakter)"
+
+      - label: "Yazar"
+        name: "author"
+        widget: "string"
+        required: false
+        default: "SH Danışmanlık Uzmanları"
+        hint: "Yazıyı yazan kişi veya ekip"
+
+      - label: "Tahmini Okuma Süresi (dakika)"
+        name: "read_time"
+        widget: "number"
+        required: false
+        value_type: "int"
+        min: 1
+        max: 60
+        hint: "Ortalama okuma süresi (dakika)"
+
+      - label: "Etiketler"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "SEO etiketleri — virgülle ayırın (örn: dernek, vakıf, hukuk)"
+
+      - label: "Yazı İçeriği"
+        name: "body"
+        widget: "markdown"
+        hint: "Yazının tam içeriği — H2, H3 başlıkları SEO için kullanın"
+        buttons:
+          - bold
+          - italic
+          - link
+          - heading-two
+          - heading-three
+          - quote
+          - bulleted-list
+          - numbered-list
+          - code
+        editor_components:
+          - image
+
+      - label: "SEO Meta Açıklaması"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "Google'da görünecek açıklama — Tam olarak 150-160 karakter olmalı"
+
+      - label: "SEO — Canonical URL (Opsiyonel)"
+        name: "canonical_url"
+        widget: "string"
+        required: false
+        hint: "Başka bir yerde de yayınlandıysa orijinal URL'yi girin"
+
+      - label: "Öne Çıkan Yazı?"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        hint: "Açık ise ana sayfada öne çıkarılır"
+
+      - label: "Taslak mı?"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        hint: "Açık ise yayınlanmaz, taslak olarak kaydedilir"
+
+  # ─────────────────────────────────────────────
+  #  2. KURUMSAL SAYFALAR
+  # ─────────────────────────────────────────────
+  - name: "kurumsal"
+    label: "🏢 Kurumsal"
+    label_singular: "Kurumsal Sayfa"
+    editor:
+      preview: false
+    files:
+
+      - file: "hakkimizda.html"
+        label: "Hakkımızda"
+        name: "hakkimizda"
+        fields:
+          - label: "Sayfa Başlığı"
+            name: "title"
+            widget: "string"
+            default: "Hakkımızda"
+          - label: "SEO Meta Açıklaması"
+            name: "description"
+            widget: "text"
+            hint: "Max 160 karakter"
+          - label: "Banner Görseli"
+            name: "banner_image"
+            widget: "image"
+            required: false
+          - label: "Ana Başlık (Banner)"
+            name: "hero_title"
+            widget: "string"
+          - label: "Alt Başlık (Banner)"
+            name: "hero_subtitle"
+            widget: "text"
+            required: false
+          - label: "Misyon"
+            name: "mission"
+            widget: "text"
+            hint: "Şirketin misyonu"
+          - label: "Vizyon"
+            name: "vision"
+            widget: "text"
+            hint: "Şirketin vizyonu"
+          - label: "Hakkımızda Detay İçerik"
+            name: "body"
+            widget: "markdown"
+
+      - file: "sss.html"
+        label: "Sıkça Sorulan Sorular (SSS)"
+        name: "sss"
+        fields:
+          - label: "Sayfa Başlığı"
+            name: "title"
+            widget: "string"
+            default: "Sıkça Sorulan Sorular"
+          - label: "SEO Meta Açıklaması"
+            name: "description"
+            widget: "text"
+            hint: "Max 160 karakter"
+          - label: "SSS Listesi"
+            name: "faqs"
+            widget: "list"
+            label_singular: "Soru"
+            fields:
+              - { label: "Soru", name: "question", widget: "string" }
+              - { label: "Cevap", name: "answer", widget: "text" }
+
+  # ─────────────────────────────────────────────
+  #  3. HİZMETLERİMİZ
+  # ─────────────────────────────────────────────
+  - name: "hizmetler"
+    label: "⚙️ Hizmetlerimiz"
+    label_singular: "Hizmet Sayfası"
+    editor:
+      preview: false
+    files:
+
+      - file: "hizmet-dernek-kurulusu.html"
+        label: "Dernek Kuruluşu"
+        name: "dernek_kurulusu"
+        fields: &hizmet_fields
+          - label: "Sayfa Başlığı"
+            name: "title"
+            widget: "string"
+          - label: "SEO Meta Açıklaması"
+            name: "description"
+            widget: "text"
+            hint: "Max 160 karakter — Google'da görünen metin"
+          - label: "Banner Görseli"
+            name: "banner_image"
+            widget: "image"
+            required: false
+            hint: "Sayfa üst banner görseli (1920x400px önerilir)"
+          - label: "Banner Başlığı"
+            name: "banner_title"
+            widget: "string"
+            hint: "Banner üzerindeki ana başlık"
+          - label: "Kısa Özet (Banner Altı)"
+            name: "excerpt"
+            widget: "text"
+            required: false
+            hint: "Banner altında görünen kısa açıklama"
+          - label: "Hizmet İçeriği"
+            name: "body"
+            widget: "markdown"
+            hint: "Sayfanın ana içeriği — H2/H3 başlıkları kullanın"
+          - label: "Yan Menü Başlığı"
+            name: "sidebar_title"
+            widget: "string"
+            required: false
+            default: "Nasıl Yardımcı Olabiliriz?"
+          - label: "Yan Menü CTA Metni"
+            name: "sidebar_cta_text"
+            widget: "text"
+            required: false
+          - label: "Yan Menü CTA Butonu Metni"
+            name: "sidebar_cta_button"
+            widget: "string"
+            required: false
+            default: "Bize Ulaşın"
+          - label: "İlgili Hizmetler (Yan Menü)"
+            name: "related_services"
+            widget: "list"
+            required: false
+            hint: "Yan menüde gösterilecek ilgili hizmetler"
+            fields:
+              - { label: "Hizmet Adı", name: "name", widget: "string" }
+              - { label: "Hizmet URL", name: "url", widget: "string" }
+
+      - file: "hizmet-derbis.html"
+        label: "DERBİS İşlemleri"
+        name: "derbis"
+        fields: *hizmet_fields
+
+      - file: "hizmet-vakif-kurulusu.html"
+        label: "Vakıf Kuruluşu"
+        name: "vakif_kurulusu"
+        fields: *hizmet_fields
+
+      - file: "hizmet-genel-kurul.html"
+        label: "Genel Kurul Yönetimi"
+        name: "genel_kurul"
+        fields: *hizmet_fields
+
+      - file: "hizmet-mali-danismanlik.html"
+        label: "Mali Danışmanlık"
+        name: "mali_danismanlik"
+        fields: *hizmet_fields
+
+      - file: "hizmet-proje-yazma.html"
+        label: "Proje ve Fon Geliştirme"
+        name: "proje_fon"
+        fields: *hizmet_fields
+
+      - file: "hizmet-yasal-danismanlik.html"
+        label: "Yasal Danışmanlık"
+        name: "yasal_danismanlik"
+        fields: *hizmet_fields
+
+  # ─────────────────────────────────────────────
+  #  4. SİTE AYARLARI
+  # ─────────────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ Site Ayarları"
+    editor:
+      preview: false
+    files:
+      - file: "content/settings.json"
+        label: "Genel Ayarlar"
+        name: "general_settings"
+        fields:
+          - label: "Site Adı"
+            name: "site_name"
+            widget: "string"
+            default: "SH Danışmanlık"
+
+          - label: "Telefon (Görünen)"
+            name: "phone"
+            widget: "string"
+            hint: "Format: +90 534 705 42 34"
+
+          - label: "Telefon (Ham — sadece rakam)"
+            name: "phone_raw"
+            widget: "string"
+            hint: "Örnek: 905347054234"
+
+          - label: "E-Posta"
+            name: "email"
+            widget: "string"
+
+          - label: "Adres"
+            name: "address"
+            widget: "string"
+
+          - label: "WhatsApp Numarası (sadece rakam)"
+            name: "whatsapp"
+            widget: "string"
+            hint: "Örnek: 905347054234"
+
+          - label: "Footer Sloganı"
+            name: "footer_slogan"
+            widget: "string"
+
+          - label: "Telif Hakkı Yılı"
+            name: "copyright_year"
+            widget: "string"
+
+          - label: "Sosyal Medya"
+            name: "social"
+            widget: "object"
+            fields:
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false, hint: "Örnek: https://linkedin.com/company/sh-danismanlik" }
+              - { label: "Twitter/X URL", name: "twitter", widget: "string", required: false }
+              - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+              - { label: "YouTube URL", name: "youtube", widget: "string", required: false }
+
+  # ─────────────────────────────────────────────
+  #  5. ANA SAYFA
+  # ─────────────────────────────────────────────
+  - name: "homepage"
+    label: "🏠 Ana Sayfa"
+    editor:
+      preview: false
+    files:
+      - file: "content/homepage.json"
+        label: "Ana Sayfa İçerikleri"
+        name: "homepage_content"
+        fields:
+          - label: "Slider 1"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Başlık", name: "title", widget: "string" }
+              - { label: "Alt Yazı", name: "subtitle", widget: "text" }
+              - { label: "Buton Metni", name: "cta_text", widget: "string" }
+              - { label: "Buton Linki", name: "cta_link", widget: "string" }
+              - label: "Arka Plan Görseli"
+                name: "bg_image"
+                widget: "image"
+                required: false
+
+          - label: "Slider 2"
+            name: "hero2"
+            widget: "object"
+            fields:
+              - { label: "Başlık", name: "title", widget: "string" }
+              - { label: "Alt Yazı", name: "subtitle", widget: "text" }
+              - { label: "Buton Metni", name: "cta_text", widget: "string" }
+              - { label: "Buton Linki", name: "cta_link", widget: "string" }
+              - label: "Arka Plan Görseli"
+                name: "bg_image"
+                widget: "image"
+                required: false
+
+          - label: "Slider 3"
+            name: "hero3"
+            widget: "object"
+            fields:
+              - { label: "Başlık", name: "title", widget: "string" }
+              - { label: "Alt Yazı", name: "subtitle", widget: "text" }
+              - { label: "Buton Metni", name: "cta_text", widget: "string" }
+              - { label: "Buton Linki", name: "cta_link", widget: "string" }
+              - label: "Arka Plan Görseli"
+                name: "bg_image"
+                widget: "image"
+                required: false
+
+          - label: "İstatistikler"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Yıllık Tecrübe", name: "experience_years", widget: "string" }
+              - { label: "Başarılı Proje", name: "successful_projects", widget: "string" }
+              - { label: "Aktif STK Partneri", name: "active_partners", widget: "string" }
+              - { label: "Eğitim Alan Katılımcı", name: "trained_participants", widget: "string" }
+
+          - label: "Hakkımızda Kısa Başlık"
+            name: "about_short"
+            widget: "string"
+
+          - label: "Hakkımızda Kısa Metin"
+            name: "about_text"
+            widget: "text"
+
+          - label: "Referans Logoları"
+            name: "reference_logos"
+            widget: "list"
+            required: false
+            label_singular: "Logo"
+            fields:
+              - { label: "Kurum Adı", name: "name", widget: "string" }
+              - { label: "Logo Görseli", name: "logo", widget: "image" }
+              - { label: "Website URL", name: "url", widget: "string", required: false }
