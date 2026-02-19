@@ -1,11 +1,13 @@
 ---
-layout: layouts/blog-post.html
-title: "Merhaba Dünya "
-description: kjdjhfdkgjilsdşkfkjdfhjklv kjavndsdmlvbklaşfa
-date: 1901-02-19
-category: STK Rehberi
 excerpt: wweffggrgreg ok kjhuyhıjıhyugytbjkjonıy u u u bb j  b uyıu ııu uıweh
   uıweıı wıu nwıeur ıwerı wenr nweırn ıwenur e
+draft: false
+layout: layouts/blog-post.html
+title: "Merhaba Dünya "
+category: STK Rehberi
+date: 2026-02-20
+description: kjdjhfdkgjilsdşkfkjdfhjklv kjavndsdmlvbklaşfa
+featured: true
 ---
 ## **merhaba         bugün çok güzel** bir gün *herkes güzelce* `dfdfdfdsfdfdsfds`dsfdsfsd 
 
